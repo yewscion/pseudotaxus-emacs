@@ -30,6 +30,7 @@ EXTRA_DIST =	Changelog.md \
 		ChangeLog \
 		COPYING \
 		guix.scm \
+		pre-install-env.in
 		tests/maintests.scm \
 		build-aux/test-driver.scm \
 		doc/version.texi.in \
@@ -42,6 +43,10 @@ EXTRA_DIST =	Changelog.md \
 
 ## Define Emacs files
 dist_lisp_LISP = pseudotaxus/pseudotaxus.el
+
+## Don't Distribute, Don't Install
+nodist_noinst_SCRIPTS = pre-inst-env
+
 ################################################################################
 
 # Added Jobs

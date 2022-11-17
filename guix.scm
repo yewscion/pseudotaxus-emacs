@@ -20,7 +20,7 @@
                                      ".tar.bz2")))
   (build-system emacs-build-system)
   (native-inputs (list autoconf automake pkg-config texinfo
-                       emacs-minimal))
+                       emacs-minimal guile3))
   (synopsis "A major mode for editing Pseudotaxus files")
   (description
    (string-append
