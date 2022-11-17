@@ -30,7 +30,7 @@ EXTRA_DIST =	Changelog.md \
 		ChangeLog \
 		COPYING \
 		guix.scm \
-		pre-install-env.in
+		pre-inst-env.in
 		tests/maintests.scm \
 		build-aux/test-driver.scm \
 		doc/version.texi.in \
