@@ -33,6 +33,15 @@ filename-length-max=99 std-options])
 dnl Find Emacs Installation
 AM_PATH_LISPDIR
 
+dnl Set Up Guile 3.0
+GUILE_PKG([3.0])
+GUILE_PROGS
+if test "x$GUILD" = "x"; then
+   AC_MSG_ERROR(['guild' binary not found;
+   please check Your guile installation.])
+fi
+GUILE_SITE_DIR
+
 dnl Finishing Up
 AC_PROG_LN_S
 AC_PROG_MKDIR_P
