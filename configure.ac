@@ -25,6 +25,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 _AM_SUBST_NOTMAKE([LICENSE])
 AC_CONFIG_SRCDIR([README.md])
 AC_CONFIG_AUX_DIR([build-aux])
+AC_SUBST(PACKAGE_DOCS_COMMAND, [info])
 
 dnl Set Up Automake
 AM_INIT_AUTOMAKE([-Wall -Werror -Wportability gnu check-news dist-bzip2
