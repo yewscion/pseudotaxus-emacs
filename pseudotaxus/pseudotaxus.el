@@ -44,7 +44,7 @@
               "argument\\|parameter\\|"
               "file\\|stream\\|pipe\\|port\\|line\\|interrupt\\|sum\\|"
               "difference\\|product\\|quotient\\|remainder\\|value\\|name\\|"
-              "result\\|message\\|field\\|an?\\|the\\)"
+              "result\\|message\\|field\\|an?\\|the\\|structure\\)"
               "\\(ish\\|-like\\|esque\\|s\\)?"))
 (defvar cdr:pseudotaxus-operators-regexp
       (regexp-opt '(">" "<" "==" "!=" "<>" "<=" ">=" "=" "!<" "!>" "≡" "≯"
@@ -66,7 +66,7 @@
        "unless" "while" "done" "endwhile" "do" "case" "of" "others" "endcase"
        "repeat" "until" "for" "endfor" "call" "exception" "as" "recurse" "this"
        "that" "except" "in" "at" "including" "convert" "wrap" "ensure" "cast"
-       "expecting" "expect" "be")
+       "expecting" "expect" "be" "where" "containing" "either" "calling" "on")
        'symbols))
 (defvar cdr:pseudotaxus-algorithms-regexp
       (regexp-opt
