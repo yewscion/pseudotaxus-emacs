@@ -37,15 +37,28 @@
               "success\\|failure\\|succeeds\\|fails\\|found\\|newline\\|"
               "beep\\|indent\\|user\\|screen\\|system\\)"))
 (defvar cdr:pseudotaxus-types-regexp
-      (concat "\\(number\\|string\\|character\\|boolean\\|truthy\\|falsey\\|"
-              "list\\|array\\|sequence\\|every\\|each\\|member\\|index\\|"
-              "nothing\\|maybe\\|"
-              "symbol\\|many\\|any\\|constant\\|operator\\|procedure\\|"
-              "argument\\|parameter\\|"
-              "file\\|stream\\|pipe\\|port\\|line\\|interrupt\\|sum\\|"
-              "difference\\|product\\|quotient\\|remainder\\|value\\|name\\|"
-              "result\\|message\\|field\\|an?\\|the\\|structure\\)"
-              "\\(ish\\|-like\\|esque\\|s\\)?"))
+  (regexp-opt
+   '("number" "string" "character" "boolean" "truthy" "falsey" "list" "array"
+   "sequence" "every" "each" "member" "index" "arraylist" "nothing" "maybe"
+   "symbol" "many" "any" "object" "constant" "operator" "procedure"
+   "argument" "parameter" "file" "stream" "pipe" "port" "line" "interrupt"
+   "value" "name" "result" "message" "field" "an" "a" "the" "structure"
+   "numbers" "strings" "characters" "booleans" "lists" "arrays" "sequences"
+   "members" "indices" "nothings" "maybes" "symbols" "objects" "constants"
+   "operators" "procedures" "arguments" "parameters" "files" "streams"
+   "pipes" "ports" "lines" "interrupts" "values" "names" "results"
+   "messages" "fields" "structures" "numberish" "numbery" "stringish"
+   "stringy" "characterish" "charactery" "booleanish" "booleany" "listish"
+   "listy" "arrayish" "array-y" "sequenceish" "sequencey" "memberish"
+   "membery" "indexish" "indexy" "nothingish" "nothingy" "maybeish"
+   "maybe-y" "symbolish" "symboly" "objectish" "objecty" "constantish"
+   "constanty" "operatorish" "operatory" "procedureish" "procedurey"
+   "argumentish" "argumenty" "parameterish" "parametery" "fileish" "filey"
+   "streamish" "streamy" "pipeish" "pipey" "portish" "porty" "lineish"
+   "liney" "interruptish" "interrupty" "valueish" "valuey" "nameish" "namey"
+   "resultish" "resulty" "messageish" "messagey" "fieldish" "fieldy"
+   "structurish" "structury" )
+   'symbols))
 (defvar cdr:pseudotaxus-operators-regexp
       (regexp-opt '(">" "<" "==" "!=" "<>" "<=" ">=" "=" "!<" "!>" "≡" "≯"
                     "≮" "≥" "≤" "≠" "less than" "more than" "greater than"
@@ -59,14 +72,14 @@
                   'symbols))
 (defvar cdr:pseudotaxus-keywords-regexp
       (regexp-opt
-       '("begin" "end" "read" "obtain" "get" "from" "take" "use" "copy" "print"
-       "display" "show" "save" "return" "compute" "calculate" "determine"
-       "append" "over" "set" "initialize" "init" "let" "is" "has" "contains"
-       "to" "increment" "bump" "decrement" "if" "then" "else" "otherwise" "when"
-       "unless" "while" "done" "endwhile" "do" "case" "of" "others" "endcase"
-       "repeat" "until" "for" "endfor" "call" "exception" "as" "recurse" "this"
-       "that" "except" "in" "at" "including" "convert" "wrap" "ensure" "cast"
-       "expecting" "expect" "be" "where" "containing" "either" "calling" "on")
+       '("read" "obtain" "get" "from" "use" "copy" "expect" "print" "display" "show"
+"save" "return" "compute" "calculate" "determine" "append" "to" "over" "set"
+"initialize" "init" "let" "is" "has" "contains" "be" "increment" "bump"
+"decrement" "if" "then" "else" "otherwise" "when" "unless" "while" "done"
+"endwhile" "do" "case" "of" "others" "endcase" "repeat" "until" "for"
+"endfor" "call" "calling" "exception" "as" "recurse" "on" "this" "that"
+"except" "in" "at" "with" "without" "aside" "convert" "cast" "ensure"
+"expecting" "begin" "end" "," ":" "where" "containing" "either")
        'symbols))
 (defvar cdr:pseudotaxus-algorithms-regexp
       (regexp-opt
@@ -75,7 +88,8 @@
          "range" "max" "maximum" "min" "minimum" "maxima" "minima" "ceiling"
          "floor" "sort" "reverse" "search" "find" "filter in" "filter out"
          "grade up" "grade down" "scan" "map" "reduce" "expand" "replicate"
-         "tally" "indexing")
+         "depth" "match" "tally" "enlist" "membership" "pick" "drop" "take"
+         "iota")
        'symbols))
 (defvar cdr:pseudotaxus-string-regexp
       "\\('.*'\\|\\\".*\\\"\\)")
