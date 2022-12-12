@@ -8,6 +8,7 @@
  (gnu packages pkg-config)
  (gnu packages texinfo)
  (gnu packages emacs)
+ (gnu packages guile)
  (guix gexp))
 
 (package
@@ -20,7 +21,7 @@
                                      ".tar.bz2")))
   (build-system emacs-build-system)
   (native-inputs (list autoconf automake pkg-config texinfo
-                       emacs-minimal guile3))
+                       emacs-minimal guile-3.0))
   (synopsis "A major mode for editing Pseudotaxus files")
   (description
    (string-append
